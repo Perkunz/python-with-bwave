@@ -1,0 +1,42 @@
+
+
+projects = [
+    'Full stack e-commerce web application',
+    'Full stack blog application',
+    'Full stack registration portal',
+    'Full stack bank application'
+]
+
+#
+
+def recommend_order():
+
+    project_info = {}
+
+    print('Lets determine the order of your projects based on the number of technologies used.')
+
+    #ask the user about each project
+    for project in projects:
+        print(f'\n Project: {project}')
+        technologies = input('Technologies to be used in this project (comma seperated): ').split(',')
+
+        #complexity: used to determine the comlixity of a project based on the nmer of technologies that is been used
+        complexity = len(set(technologies))
+
+        #Store user input in the dictionary
+        project_info[project] = {
+            'Technologies': technologies,
+            'complexity': complexity
+        }
+
+
+        #sorted projects based on the number of technologies
+
+        sorted_projects = sorted(project_info.keys())
+            
+        
+
+
+
+
+
